@@ -16,7 +16,13 @@ if ARGV.size < 1
   exit 1
 end
 
-file = ARGV.shift
+puts file = ARGV.shift
 
-tw = Twitter::Base.new(Twitter::HTTPAuth.new(conf['user'], conf['pass']))
-tw.update_profile_image(open(file))
+begin
+  tw = Twitter::Base.new(Twitter::HTTPAuth.new(conf['user'], conf['pass']))
+  tw.update_profile_image(open(file))
+rescue => e
+  STDERR.puts e
+end
+
+puts 'upload success'

@@ -9,5 +9,5 @@ end
 source = ARGV.shift
 dir = File.dirname(__FILE__)
 
-`jruby #{dir}/create_icon.rb #{source} #{dir}/tmp.jpg`
-`ruby #{dir}/upload.rb #{dir}/tmp.jpg`
+puts `jruby #{dir}/create_icon.rb #{source} #{dir}/tmp.jpg`
+puts `ruby #{dir}/upload.rb #{dir}/tmp.jpg`

@@ -6,7 +6,7 @@ import 'java.awt.image.BufferedImage'
 
 class Glitch
   # input BufferedImage, return BufferedImage
-  def glitch(img, plugin)
+  def glitch(img, plugin=nil)
     plugin = plugins[rand(plugins.size)] if plugin == nil
     require plugin[0]
     method = eval("#{plugin[1]}.method('glitch')")

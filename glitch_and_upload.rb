@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+jruby = '/home/sho/lib/jruby/bin/jruby'
+
 if ARGV.size < 1
   STDERR.puts 'require : source image'
   STDERR.puts 'ruby glitch_and_upload /path/to/img.jpg'
@@ -9,5 +11,5 @@ end
 source = ARGV.shift
 dir = File.dirname(__FILE__)
 
-puts `jruby #{dir}/create_icon.rb #{source} #{dir}/tmp.jpg`
+puts `#{jruby} #{dir}/create_icon.rb #{source} #{dir}/tmp.jpg`
 puts `ruby #{dir}/upload.rb #{dir}/tmp.jpg`

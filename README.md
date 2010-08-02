@@ -6,7 +6,7 @@ create [glitch icon](http://www.flickr.com/photos/shokai/4851980141/)
 require
 =======
 
-* Java 1.5 or highre
+* Java 1.5 or higher
 * JRuby 1.5
 
 

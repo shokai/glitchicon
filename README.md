@@ -1,6 +1,9 @@
 glitchicon
 ==========
-create [glitch icon](http://www.flickr.com/photos/shokai/4851980141/)
+create glitch icons
+
+* [sample](http://www.flickr.com/photos/shokai/4855370862/)
+* [sample2](http://www.flickr.com/photos/shokai/4855372028/)
 
 
 require

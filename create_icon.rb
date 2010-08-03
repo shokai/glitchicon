@@ -23,7 +23,7 @@ g = Glitch.new
 loop do
   img, plugin = g.glitch(img)
   puts plugin[1]
-  break if rand > 0.3
+  break if rand > 0.5
 end
 ImageIO.write(img, out_name.split(/\./).last, java.io.File.new(out_name))
 puts out_name

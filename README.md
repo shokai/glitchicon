@@ -30,12 +30,16 @@ create icon
 upload icon to twitter
 ======================
 
+regist your app
+---------------
+regist your app [on twitter](http://twitter.com/apps/new)
+
 edit config.yaml
 ----------------
 
     % cp sample.config.yaml config.yaml
 
-put your username and password
+edit consumer key and secret.
 
 upload
 ------

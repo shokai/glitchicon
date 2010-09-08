@@ -1,3 +1,5 @@
 
-user : 'your-twitter-name'
-pass : 'your-twitter-pass'
+consumer_key : 'your-app-consumer-key'
+consumer_secret : 'your-app-consumer-secret'
+access_token : 'use auth.rb'
+access_secret : 'use auth.rb'

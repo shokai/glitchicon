@@ -19,7 +19,9 @@ end
 puts file = ARGV.shift
 
 begin
-  tw = Twitter::Base.new(Twitter::HTTPAuth.new(conf['user'], conf['pass']))
+  oauth = Twitter::OAuth.new(conf['consumer_key'], conf['consumer_secret'])
+  oauth.authorize_from_access(conf['access_token'], conf['access_secret'])
+  tw = Twitter::Base.new(oauth)
   tw.update_profile_image(open(file))
 rescue => e
   STDERR.puts e

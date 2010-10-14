@@ -22,9 +22,10 @@ begin
   oauth = Twitter::OAuth.new(conf['consumer_key'], conf['consumer_secret'])
   oauth.authorize_from_access(conf['access_token'], conf['access_secret'])
   tw = Twitter::Base.new(oauth)
-  tw.update_profile_image(open(file))
+  tw.update_profile_image(open(file,'r'))
 rescue => e
   STDERR.puts e
+  exit 1
 end
 
 puts 'upload success'

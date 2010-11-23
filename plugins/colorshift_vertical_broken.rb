@@ -10,7 +10,7 @@ module Colorshift_vertical_broken
   def Colorshift_vertical_broken.glitch(img)
     shifts = [0,0,0]
     for x in 0...img.width do
-      if rand > 0.85
+      if rand > 0.007 * img.width
         shifts = shifts.map{|j|
           j = rand(255)-128
         }

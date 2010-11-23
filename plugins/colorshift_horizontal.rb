@@ -10,7 +10,7 @@ module Colorshift_horizontal
   def Colorshift_horizontal.glitch(img)
     shifts = [0,0,0]
     for y in 0...img.height do
-      if rand > 0.85
+      if rand > 0.007 * img.height
         shifts = shifts.map{|j|
           j = rand(255)-128
         }

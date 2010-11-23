@@ -3,6 +3,7 @@ require 'java'
 import 'java.lang.System'
 import 'javax.imageio.ImageIO'
 import 'java.awt.image.BufferedImage'
+require File.dirname(__FILE__)+'/helper'
 
 class Glitch
   # input BufferedImage, return BufferedImage

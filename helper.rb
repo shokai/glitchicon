@@ -4,7 +4,7 @@ class Array
     raise ArgunmentError 'split(min, max)  min should be less than max' if min > max
     result = Array.new
     _self = self.clone
-    p _self
+    _self
     loop do
       tmp = Array.new
       size = rand(max-min+1)+min

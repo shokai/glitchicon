@@ -25,6 +25,7 @@ begin
   tw.update_profile_image(open(file,'r'))
 rescue => e
   STDERR.puts e
+  exit 1
 end
 
 puts 'upload success'

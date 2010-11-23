@@ -8,7 +8,7 @@ require File.dirname(__FILE__)+'/helper'
 class Glitch
   # input BufferedImage, return BufferedImage
   def glitch(img, plugin=nil)
-    plugin = plugins[rand(plugins.size)] if plugin == nil
+    plugin = plugins.choice if plugin == nil
     require plugin[0]
     method = eval("#{plugin[1]}.method('glitch')")
     return method.call(img), plugin

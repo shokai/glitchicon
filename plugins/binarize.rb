@@ -18,7 +18,7 @@ module Binarize
         if gray < 128
           bin = 0
         else
-          bin  =255
+          bin = 255
         end
 
         pix = ((bin << 16)&0xFF0000 | (bin << 8)&0xFF00 | bin)

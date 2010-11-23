@@ -11,7 +11,7 @@ module Colorshift_vertical
     shifts = [0,0,0]
 
     regions = Array.new
-    for i in 0...img.height do regions << i end
+    for i in 0...img.width do regions << i end
     size_ratio = img.width/100
     regions = regions.split_nest((3*size_ratio).to_i,(15*size_ratio).to_i)
 

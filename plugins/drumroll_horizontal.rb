@@ -9,15 +9,21 @@ module Drumroll_horizontal
 
   def Drumroll_horizontal.glitch(img)
     img_result = BufferedImage.new(img.width, img.height, img.type)
-    roll = 0
-    for y in 0...img.height do
-      roll = rand(img.width) if rand > 0.95
-      roll = 0 if rand > 0.95
-      for x in 0...img.width do
-        pix = img.get_rgb(x, y)
-        x2 = x+roll
-        x2 -= img.width if x2 > img.width-1
-        img_result.set_rgb(x2, y, pix)
+
+    regions = Array.new
+    for i in 0...img.height do regions << i end
+    size_ratio = img.height/100
+    regions = regions.split_nest((15*size_ratio).to_i,(40*size_ratio).to_i)
+
+    for region in regions do
+      roll = rand(img.width)
+      for y in region do
+        for x in 0...img.width do
+          pix = img.get_rgb(x, y)
+          x2 = x+roll
+          x2 -= img.width if x2 > img.width-1
+          img_result.set_rgb(x2, y, pix)
+        end
       end
     end
     return img_result

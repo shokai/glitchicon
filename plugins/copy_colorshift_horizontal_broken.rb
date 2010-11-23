@@ -10,18 +10,18 @@ module Copy_colorshift_horizontal_broken
   def Copy_colorshift_horizontal_broken.glitch(img)
     img_result = BufferedImage.new(img.width, img.height, img.type)
     img_result.graphics.drawImage(img, 0, 0, nil)
-    roll = 0
-    sources = Array.new
-    for i in rand(img.height)...img.height do
-      sources << i
-      break if rand > 0.98
-    end
+
+    regions = Array.new
+    for i in 0...img.height do regions << i end
+    size_ratio = img.height/100
+    regions = regions.split_nest((15*size_ratio).to_i,(40*size_ratio).to_i)
+
     loop do
       shifts = [0,0,0].map{|i|
         rand(255)-128
       }
       target = rand(img.height)
-      sources.each{|y|
+      regions.choice.each{|y|
         for x in 0...img.width do
           pix = img.get_rgb(x, y)
           r = pix >> 16 & 0xFF

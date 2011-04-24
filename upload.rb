@@ -29,4 +29,5 @@ begin
   puts 'upload success'
 rescue => e
   STDERR.puts e
+  exit 1
 end

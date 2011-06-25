@@ -8,6 +8,7 @@ end
 
 source = ARGV.shift
 dir = File.dirname(__FILE__)
+ext = source.split(/\./).last || 'png'
 
-puts `jruby #{dir}/create_icon.rb #{source} #{dir}/tmp.jpg`
-puts `jruby #{dir}/upload.rb #{dir}/tmp.jpg`
+puts `jruby #{dir}/create_icon.rb #{source} #{dir}/tmp.#{ext}`
+puts `jruby #{dir}/upload.rb #{dir}/tmp.#{ext}`

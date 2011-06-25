@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env jruby
 require 'rubygems'
 require 'twitter'
 require 'yaml'

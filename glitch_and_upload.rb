@@ -8,7 +8,8 @@ end
 
 source = ARGV.shift
 dir = File.dirname(__FILE__)
-ext = source.split(/\./).last || 'png'
+ext = source.scan(/\.(.+)$/).first.first
+ext = 'png' if ext.size < 1
 
 puts `jruby #{dir}/create_icon.rb #{source} #{dir}/tmp.#{ext}`
 puts `jruby #{dir}/upload.rb #{dir}/tmp.#{ext}`

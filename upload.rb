@@ -1,5 +1,6 @@
 #!/usr/bin/env jruby
 require 'rubygems'
+require 'bundler/setup'
 require 'twitter'
 require 'yaml'
 

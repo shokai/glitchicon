@@ -1,4 +1,6 @@
 #!/usr/bin/env jruby
+require 'rubygems'
+require 'bundler/setup'
 require File.dirname(__FILE__)+'/glitch'
 require 'java'
 import 'java.lang.System'

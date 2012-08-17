@@ -1,5 +1,6 @@
-source 'http://rubygems.org'
+source :rubygems
 
 gem 'twitter'
 gem 'oauth'
 gem 'json'
+gem 'jruby-openssl'

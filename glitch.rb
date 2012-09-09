@@ -9,7 +9,7 @@ class Glitch
   def glitch(img, plugin=nil)
     plugin = plugins[rand(plugins.size)] if plugin == nil
     require plugin[0]
-    method = eval("#{plugin[1]}.method('glitch')")
+    method = eval "#{plugin[1]}.method('glitch')"
     return method.call(img), plugin
   end
 

@@ -2,7 +2,7 @@
 
 if ARGV.size < 1
   STDERR.puts 'require : source image'
-  STDERR.puts 'ruby glitch_and_upload /path/to/img.jpg'
+  STDERR.puts "ruby #{$0} /path/to/img.jpg"
   exit 1
 end
 

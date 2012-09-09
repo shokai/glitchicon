@@ -9,8 +9,9 @@ create glitch icons
 require
 =======
 
+* Ruby 1.8.7+
 * Java 1.5 or higher
-* JRuby 1.5
+* JRuby 1.5+
 
 
 run test
@@ -50,7 +51,7 @@ upload
 create and upload
 =================
 
-    % ruby glitch_and_upload.rb source.png
+    % sh glitch_and_upload.sh source.png
 
 
 make plugin

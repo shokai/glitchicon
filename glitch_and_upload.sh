@@ -10,4 +10,5 @@ fi
 
 cd `dirname $0`
 jruby create_icon.rb $1 $TMP
-jruby upload.rb $TMP
+ruby upload.rb $TMP
+rm -f TMP

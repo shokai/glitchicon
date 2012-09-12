@@ -17,7 +17,7 @@ require
 run test
 ========
 
-    % jruby glitch_test.rb source.jpg
+    % jruby tests/glitch_test.rb source.jpg
 
 it makes "test" directory, and create test images there.
 
@@ -25,7 +25,7 @@ it makes "test" directory, and create test images there.
 create icon
 ===========
 
-    % jruby create_icon.rb source.jpg output.jpg
+    % jruby bin/create_icon.rb source.jpg output.jpg
 
 
 upload icon to twitter
@@ -45,13 +45,13 @@ edit consumer key and secret.
 upload
 ------
 
-    % ruby upload.rb /path/to/img.jpg
+    % ruby bin/upload.rb /path/to/img.jpg
 
 
 create and upload
 =================
 
-    % sh glitch_and_upload.sh source.png
+    % ./glitch_and_upload.sh source.png
 
 
 make plugin

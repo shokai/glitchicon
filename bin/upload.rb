@@ -5,7 +5,7 @@ require 'twitter'
 require 'yaml'
 
 begin
-  conf = YAML::load open(File.dirname(__FILE__) + '/config.yaml')
+  conf = YAML::load open(File.expand_path '../config.yaml', File.dirname(__FILE__))
 rescue
   STDERR.puts 'config.yaml load error'
   exit 1

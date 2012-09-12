@@ -1,5 +1,5 @@
 #!/usr/bin/env jruby
-require File.dirname(__FILE__)+'/glitch'
+require File.expand_path '../glitch', File.dirname(__FILE__)
 require 'java'
 import 'java.lang.System'
 import 'javax.imageio.ImageIO'

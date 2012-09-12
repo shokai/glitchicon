@@ -9,6 +9,6 @@ then
 fi
 
 cd `dirname $0`
-jruby create_icon.rb $1 $TMP
-ruby upload.rb $TMP
+jruby bin/create_icon.rb $1 $TMP
+ruby bin/upload.rb $TMP
 rm -f TMP

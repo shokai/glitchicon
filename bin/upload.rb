@@ -20,13 +20,13 @@ end
 puts file = ARGV.shift
 
 begin
-  Twitter.configure do |config|
+  twitter = Twitter::REST::Client.new do |config|
     config.consumer_key = conf['consumer_key']
     config.consumer_secret = conf['consumer_secret']
-    config.oauth_token = conf['access_token']
-    config.oauth_token_secret = conf['access_secret']
+    config.access_token = conf['access_token']
+    config.access_token_secret = conf['access_secret']
   end
-  Twitter.update_profile_image(open(file,'r'))
+  twitter.update_profile_image(open(file,'r'))
   puts 'upload success'
 rescue => e
   STDERR.puts e

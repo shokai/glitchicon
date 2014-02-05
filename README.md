@@ -2,6 +2,7 @@ glitchicon
 ==========
 create glitch icons
 
+- https://github.com/shokai/glitchicon
 * [sample](http://www.flickr.com/photos/shokai/4855370862/)
 * [sample2](http://www.flickr.com/photos/shokai/4855372028/)
 
